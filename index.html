@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
@@ -9,9 +8,9 @@
   <style>
     :root{--bg:#0b0b0b;--card:#111;--accent:#b8860b;--muted:#cfcfcf}
     *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Georgia, 'Times New Roman', serif;background:linear-gradient(180deg,#050505, #0b0b0b);color:var(--muted)}
+    html,body{height:100%;margin:0;font-family:Georgia, 'Times New Roman', serif;background:linear-gradient(180deg,#050505,#0b0b0b);color:var(--muted)}
     a{color:var(--accent);text-decoration:none}
-    header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between}
+    header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
     .brand{display:flex;align-items:center;gap:16px}
     .logo{width:64px;height:64px;border-radius:6px;background:linear-gradient(135deg,#222,#111);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px}
     nav a{margin-left:18px;font-size:15px}
@@ -27,15 +26,27 @@
     .gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
     footer{padding:28px 24px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     .small{font-size:13px;color:#9e9e9e}
+    img.inline{width:100%;max-height:360px;object-fit:cover;border-radius:8px;margin:12px 0}
     @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)} }
     @media (max-width:520px){.grid{grid-template-columns:1fr}.logo{display:none}.hero{padding:20px}}
     /* age gate overlay */
     #agegate{position:fixed;inset:0;background:rgba(2,2,2,0.98);display:flex;align-items:center;justify-content:center;z-index:9999}
     #agegate .box{max-width:520px;background:var(--card);padding:28px;border-radius:12px;text-align:center}
     #agegate button{margin:8px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer}
+    /* tabs small helper */
+    .tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+    .tabs button{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .tabs button.active{background:var(--accent);color:#050505}
+    .tabcontent{display:none}
+    .tabcontent.active{display:block}
+    /* simple photo overlay for gallery */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:10000;padding:20px}
+    .lightbox img{max-width:95%;max-height:90%;border-radius:8px}
+    .lightbox.visible{display:flex}
   </style>
 </head>
 <body>
+  <!-- Age gate -->
   <div id="agegate" aria-hidden="false">
     <div class="box">
       <h2>Vous devez avoir plus de 18 ans</h2>
@@ -45,7 +56,9 @@
         <button id="yes" style="background:var(--accent);color:#050505;border:none">OUI, J'AI PLUS DE 18 ANS</button>
       </div>
     </div>
-  </div>  <header>
+  </div>
+
+  <header>
     <div class="brand">
       <div class="logo">K</div>
       <div>
@@ -58,8 +71,11 @@
       <a href="#galerie">Galerie</a>
       <a href="#temoignages">Témoignages</a>
       <a href="#contact">Contact / RDV</a>
+      <a href="#paiement">Réservation</a>
     </nav>
-  </header>  <main>
+  </header>
+
+  <main>
     <section class="hero">
       <div class="intro">
         <h1>Maîtresse Katarina — dominatrice à Paris</h1>
@@ -67,123 +83,220 @@
         <div class="card">
           <h3>Ce que j'explore</h3>
           <ul>
-            <li>Bondage et cordes esthétiques</li>
-            <li>Jeux d'impact et discipline rythmée</li>
-            <li>Scénarios psychologiques et rôle-play</li>
-            <li>Sessions sensorielles et privations</li>
+            <li>Bondage et cordes esthétiques (shibari)</li>
+            <li>Jeux d'impact : fessées, paddles, floggers, martinet</li>
+            <li>Discipline et entraînement comportemental</li>
+            <li>Role-play, scénarios et Captivité soft</li>
+            <li>Jeux de pouvoir et protocoles (servitude, cérémonies)</li>
+            <li>Jeux sensoriels : privation, stimulation contrôlée</li>
+            <li>Jeux d'humiliation verbale (consensuelle et cadrée)</li>
+            <li>Jeux de contrainte et positions prolongées</li>
+            <li>Consignes esthétiques et posture (dress code, présentation)</li>
+            <li>Soins après séance, débrief et suivi post-séance</li>
           </ul>
           <p class="small">Chaque séance commence par un échange préalable afin de définir limites, mots de sécurité et attentes.</p>
         </div>
-      </div><aside class="card book">
-    <div>
-      <strong>Prendre rendez‑vous</strong>
-      <p class="small">Contact par message ou réservation en ligne.</p>
-    </div>
-    <div style="display:flex;gap:8px;flex-direction:column">
-      <a href="tel:+33700000000" class="small">SMS : 07 00 00 00 00</a>
-      <!-- Replace the href below with your real Calendly/booking URL -->
-      <a href="#booking"><button>Réserver une séance</button></a>
-      <a href="#contact" class="small">Envoyer un message</a>
-    </div>
-  </aside>
-</section>
 
-<section id="pratiques">
-  <h2>Mes pratiques</h2>
-  <p>Voici quelques axes de prédilection. Les descriptions restent non explicites et centrées sur la sécurité et le consentement.</p>
-  <div class="grid">
-    <div class="card practice">
-      <h3>Bondage & cordes</h3>
-      <p class="small">Attaches esthétiques, shibari, et positionnements sécurisés.</p>
-    </div>
-    <div class="card practice">
-      <h3>Jeux d'impact</h3>
-      <p class="small">Fessées, paddles, martinet — intensité adaptée au niveau du soumis.</p>
-    </div>
-    <div class="card practice">
-      <h3>Jeux psychologiques</h3>
-      <p class="small">Rôle-play, scénarios et mise en scène pour une immersion mentale.</p>
-    </div>
-  </div>
-</section>
+        <!-- inline images between textes -->
+        <img src="img0.jpg" alt="ambiance" class="inline" />
+        <p>Mon travail se concentre sur la qualité de la relation et sur une mise en scène maîtrisée. La discrétion et le respect des limites sont non négociables.</p>
+        <img src="img2.jpg" alt="accessoires" class="inline" />
+      </div>
 
-<section id="galerie">
-  <h2>Galerie</h2>
-  <p class="small">Images esthétiques et suggestives — non explicites. Cliquez pour agrandir.</p>
-  <div class="grid gallery">
-    <img src="/images/placeholder1.jpg" alt="Portrait stylisé de Maîtresse Katarina" />
-    <img src="/images/placeholder2.jpg" alt="Ambiance donjon, lumière tamisée" />
-    <img src="/images/placeholder3.jpg" alt="Accessoires et mobilier" />
-  </div>
-  <p class="small" style="margin-top:10px">Remarque : pour préserver l'intimité, certaines photos peuvent être protégées par mot de passe ou accessibles uniquement après prise de contact.</p>
-</section>
+      <aside class="card book">
+        <div>
+          <strong>Prendre rendez-vous</strong>
+          <p class="small">Contact par message ou réservation en ligne.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-direction:column">
+          <a href="tel:+33700000000" class="small">SMS : 07 00 00 00 00</a>
+          <a href="#booking"><button>Réserver une séance</button></a>
+          <a href="#contact" class="small">Envoyer un message</a>
+        </div>
+      </aside>
+    </section>
 
-<section id="temoignages">
-  <h2>Témoignages</h2>
-  <div class="grid">
-    <div class="card">
-      <p>« Une expérience raffinée, où la psychologie compte autant que les gestes. »</p>
-      <p class="small">— A.M.</p>
-    </div>
-    <div class="card">
-      <p>« Maîtresse Katarina m'a guidé avec fermeté et bienveillance. »</p>
-      <p class="small">— L.</p>
-    </div>
-    <div class="card">
-      <p>« Professionnalisme, discrétion et esthétique au rendez-vous. »</p>
-      <p class="small">— T.</p>
-    </div>
-  </div>
-</section>
+    <section id="pratiques">
+      <h2>Mes pratiques</h2>
+      <p>Voici l'ensemble des pratiques proposées — présentées de façon non explicite, centrées sur sécurité, consentement et esthétique.</p>
 
-<section id="contact">
-  <h2>Contact & prise de rendez‑vous</h2>
-  <div style="display:grid;grid-template-columns:1fr 360px;gap:18px">
-    <div class="card">
-      <form id="contactForm">
-        <label class="small">Votre nom (ou pseudo)</label><br>
-        <input type="text" name="name" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+      <div class="card">
+        <h3>Bondage & Cordes</h3>
+        <p class="small">Attaches esthétiques, shibari, suspensions légères (avec sécurité), travail de nœuds et positions.</p>
+        <img src="img3.jpg" alt="shibari" class="inline" />
+      </div>
 
-        <label class="small">Email</label><br>
-        <input type="email" name="email" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+      <div class="card">
+        <h3>Impact Play</h3>
+        <p class="small">Fessées, paddles, floggers, martinet — intensité adaptée et progressive, avec échauffement et soin.</p>
+        <img src="img4.jpg" alt="impact" class="inline" />
+      </div>
 
-        <label class="small">Message — précisez niveau, attentes et éventuelles contraintes</label><br>
-        <textarea name="message" rows="6" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"></textarea>
+      <div class="card">
+        <h3>Contrôle et Discipline</h3>
+        <p class="small">Protocoles, routines, consignes corporelles et verbales, corrections symboliques, entraînement comportemental.</p>
+        <img src="img5.jpg" alt="discipline" class="inline" />
+      </div>
 
-        <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
-          <input type="checkbox" id="consent" required>
-          <label for="consent" class="small">Je confirme avoir plus de 18 ans et accepte que mes données soient utilisées pour la prise de rendez-vous.</label>
+      <div class="card">
+        <h3>Jeux Psychologiques & Rôle-play</h3>
+        <p class="small">Scénarios, personnages, mise en scène psychologique, consentement explicite aux cadres role-play.</p>
+        <img src="img6.jpg" alt="roleplay" class="inline" />
+      </div>
+
+      <div class="card">
+        <h3>Privation & Sensory Play</h3>
+        <p class="small">Bandes, bouchons, écouteurs, variations sensorielles pour intensifier l'expérience (sécurité avant tout).</p>
+        <img src="img7.jpg" alt="privation" class="inline" />
+      </div>
+
+      <div class="card">
+        <h3>Humiliation Consensuelle</h3>
+        <p class="small">Jeux verbaux ou protocolaires dans un cadre strictement consenti et discuté au préalable.</p>
+        <img src="img8.jpg" alt="humiliation" class="inline" />
+      </div>
+
+      <div class="card">
+        <h3>Soins & Aftercare</h3>
+        <p class="small">Temps de décompression, boissons, discussions, et recommandations post-séance pour le bien-être.</p>
+        <img src="img9.jpg" alt="aftercare" class="inline" />
+      </div>
+
+      <div class="card">
+        <h3>Galerie & Esthétique</h3>
+        <p class="small">Mise en scène, accessoires, et photos esthétiques — non explicites.</p>
+        <img src="img10.jpg" alt="esthétique" class="inline" />
+      </div>
+    </section>
+
+    <section id="galerie">
+      <h2>Galerie</h2>
+      <p class="small">Images esthétiques et suggestives — non explicites. Cliquez pour agrandir.</p>
+      <div class="grid gallery">
+        <img src="img0.jpg" alt="img0" data-src="img0.jpg" class="thumb">
+        <img src="img1.jpg" alt="img1" data-src="img1.jpg" class="thumb">
+        <img src="img2.jpg" alt="img2" data-src="img2.jpg" class="thumb">
+        <img src="img3.jpg" alt="img3" data-src="img3.jpg" class="thumb">
+        <img src="img4.jpg" alt="img4" data-src="img4.jpg" class="thumb">
+        <img src="img5.jpg" alt="img5" data-src="img5.jpg" class="thumb">
+      </div>
+      <p class="small" style="margin-top:10px">Remarque : pour préserver l'intimité, certaines photos peuvent être protégées par mot de passe ou accessibles uniquement après prise de contact.</p>
+    </section>
+
+    <section id="temoignages">
+      <h2>Témoignages</h2>
+      <div class="grid">
+        <div class="card">
+          <p>« Une expérience raffinée, où la psychologie compte autant que les gestes. »</p>
+          <p class="small">— A.M.</p>
+        </div>
+        <div class="card">
+          <p>« Maîtresse Katarina m'a guidé avec fermeté et bienveillance. »</p>
+          <p class="small">— L.</p>
+        </div>
+        <div class="card">
+          <p>« Professionnalisme, discrétion et esthétique au rendez-vous. »</p>
+          <p class="small">— T.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & prise de rendez-vous</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+        <div class="card">
+          <form id="contactForm">
+            <label class="small">Votre nom (ou pseudo)</label><br>
+            <input type="text" name="name" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+
+            <label class="small">Email</label><br>
+            <input type="email" name="email" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+
+            <label class="small">Message — précisez niveau, attentes et éventuelles contraintes</label><br>
+            <textarea name="message" rows="6" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"></textarea>
+
+            <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+              <input type="checkbox" id="consent" required>
+              <label for="consent" class="small">Je confirme avoir plus de 18 ans et accepte que mes données soient utilisées pour la prise de rendez-vous.</label>
+            </div>
+
+            <div style="margin-top:12px">
+              <button type="submit" style="background:var(--accent);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer">Envoyer</button>
+            </div>
+          </form>
         </div>
 
-        <div style="margin-top:12px">
-          <button type="submit" style="background:var(--accent);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer">Envoyer</button>
+        <aside class="card">
+          <h3>Infos pratiques</h3>
+          <p class="small">SMS uniquement — 07 00 00 00 00</p>
+          <p class="small">Lieu : Paris (détails fournis après confirmation)</p>
+          <p class="small">Respect et langage soigné requis.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="paiement">
+      <h2>Réservation — Première rencontre</h2>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div class="card">
+          <h3>Première rencontre — Tarif unique</h3>
+          <p class="small">Tarif pour la première rencontre (mise en place, échange préalable et séance) :</p>
+          <p style="font-size:24px;font-weight:700;margin:8px 0">170 €</p>
+          <p class="small">Le paiement s'effectue via votre prestataire habituel. Pour des raisons de sécurité et de conformité, je ne collecte <strong>aucune</strong> donnée bancaire directement sur ce site.</p>
+
+          <!-- Lien vers ta page de paiement (localement : paiement.html) -->
+          <p style="margin-top:14px">
+            <a id="payBtn" href="paiement.html"><button style="background:var(--accent);border:none;color:#050505;padding:12px;border-radius:8px;font-weight:700;cursor:pointer">Payer 170 €</button></a>
+          </p>
+
+          <p class="small">Après paiement validé, envoie une capture ou le reçu via le formulaire de contact pour confirmer la réservation.</p>
         </div>
-      </form>
-    </div>
 
-    <aside class="card">
-      <h3>Infos pratiques</h3>
-      <p class="small">SMS uniquement — 07 00 00 00 00</p>
-      <p class="small">Lieu : Paris (détails fournis après confirmation)</p>
-      <p class="small">Respect et langage soigné requis.</p>
-    </aside>
-  </div>
-</section>
+        <aside class="card">
+          <img src="img1.jpg" alt="vignette paiement" style="width:100%;border-radius:8px;display:block;margin-bottom:10px">
+          <div class="small">Image : vignette de la première rencontre</div>
+        </aside>
+      </div>
 
-  </main>  <footer>
+      <div style="margin-top:12px" class="small">Note technique : si tu veux que le bouton redirige vers une URL externe, remplace simplement <code>paiement.html</code> par l'URL de ton prestataire.</div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="small">© <span id="year"></span> Maîtresse Katarina — Tous droits réservés</div>
     <div class="small"><a href="#">Politique de confidentialité</a> · <a href="#">Mentions légales</a></div>
-  </footer>  <script>
+  </footer>
+
+  <!-- simple lightbox & basic JS -->
+  <div id="lightbox" class="lightbox" onclick="hideLightbox()"><img id="lightboxImg" src="" alt=""></div>
+
+  <script>
+    // year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Age gate
+
+    // age gate
     document.getElementById('yes').addEventListener('click', ()=>{document.getElementById('agegate').style.display='none';});
     document.getElementById('no').addEventListener('click', ()=>{window.location.href='about:blank';});
 
-    // Simple contact handler (placeholder) — replace with server-side or form service
+    // contact form placeholder (client-side only)
     document.getElementById('contactForm').addEventListener('submit', function(e){
       e.preventDefault();
       alert('Merci — votre demande a été reçue. Je vous répondrai par email.');
       this.reset();
     });
-  </script></body>
-</html>
+
+    // gallery lightbox
+    function showLightbox(src){
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').classList.add('visible');
+    }
+    function hideLightbox(){ document.getElementById('lightbox').classList.remove('visible'); }
+
+    // attach click to gallery thumbs
+    document.querySelectorAll('.gallery .thumb').forEach(function(img){
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function(){ showLightbox(this.getAttribute('data-src') || this.src); });
+    });
+  </script>
+</body>
