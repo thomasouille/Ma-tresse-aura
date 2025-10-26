@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maîtresse Katarina — Dominatrice</title>
+  <meta name="description" content="Maîtresse Katarina — dominatrice. Présentation, pratiques, galerie et prise de rendez-vous." />
+  <style>
+    :root{--bg:#0b0b0b;--card:#111;--accent:#b8860b;--muted:#cfcfcf}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Georgia, 'Times New Roman', serif;background:linear-gradient(180deg,#050505, #0b0b0b);color:var(--muted)}
+    a{color:var(--accent);text-decoration:none}
+    header{padding:28px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:6px;background:linear-gradient(135deg,#222,#111);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px}
+    nav a{margin-left:18px;font-size:15px}
+    .hero{padding:48px 24px;display:grid;grid-template-columns:1fr 380px;gap:36px;align-items:start}
+    .hero .intro h1{font-size:36px;margin:0 0 12px;color:#fff}
+    .hero .intro p{line-height:1.6;margin:0 0 18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px}
+    .book{display:flex;flex-direction:column;gap:12px}
+    .book button{background:var(--accent);border:none;color:#050505;padding:12px;border-radius:8px;font-weight:700;cursor:pointer}
+    section{padding:28px 24px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .practice h3{margin:0 0 6px;color:#fff}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+    footer{padding:28px 24px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .small{font-size:13px;color:#9e9e9e}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:520px){.grid{grid-template-columns:1fr}.logo{display:none}.hero{padding:20px}}
+    /* age gate overlay */
+    #agegate{position:fixed;inset:0;background:rgba(2,2,2,0.98);display:flex;align-items:center;justify-content:center;z-index:9999}
+    #agegate .box{max-width:520px;background:var(--card);padding:28px;border-radius:12px;text-align:center}
+    #agegate button{margin:8px;padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer}
+  </style>
+</head>
+<body>
+  <div id="agegate" aria-hidden="false">
+    <div class="box">
+      <h2>Vous devez avoir plus de 18 ans</h2>
+      <p class="small">Ce site présente des thèmes adultes liés au BDSM et à la domination. Voulez-vous continuer ?</p>
+      <div style="margin-top:18px">
+        <button id="no">NON</button>
+        <button id="yes" style="background:var(--accent);color:#050505;border:none">OUI, J'AI PLUS DE 18 ANS</button>
+      </div>
+    </div>
+  </div>  <header>
+    <div class="brand">
+      <div class="logo">K</div>
+      <div>
+        <div style="font-size:13px;color:#9e9e9e">Maîtresse</div>
+        <div style="font-weight:700;font-size:18px;color:#fff">Maîtresse Katarina</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#pratiques">Pratiques</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#temoignages">Témoignages</a>
+      <a href="#contact">Contact / RDV</a>
+    </nav>
+  </header>  <main>
+    <section class="hero">
+      <div class="intro">
+        <h1>Maîtresse Katarina — dominatrice à Paris</h1>
+        <p>Élégance, discipline et consentement. Je propose des séances sur mesure, pensées pour l'esprit autant que pour le corps. Mon approche privilégie la sécurité, la clarté des limites et une esthétique soignée.</p>
+        <div class="card">
+          <h3>Ce que j'explore</h3>
+          <ul>
+            <li>Bondage et cordes esthétiques</li>
+            <li>Jeux d'impact et discipline rythmée</li>
+            <li>Scénarios psychologiques et rôle-play</li>
+            <li>Sessions sensorielles et privations</li>
+          </ul>
+          <p class="small">Chaque séance commence par un échange préalable afin de définir limites, mots de sécurité et attentes.</p>
+        </div>
+      </div><aside class="card book">
+    <div>
+      <strong>Prendre rendez‑vous</strong>
+      <p class="small">Contact par message ou réservation en ligne.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-direction:column">
+      <a href="tel:+33700000000" class="small">SMS : 07 00 00 00 00</a>
+      <!-- Replace the href below with your real Calendly/booking URL -->
+      <a href="#booking"><button>Réserver une séance</button></a>
+      <a href="#contact" class="small">Envoyer un message</a>
+    </div>
+  </aside>
+</section>
+
+<section id="pratiques">
+  <h2>Mes pratiques</h2>
+  <p>Voici quelques axes de prédilection. Les descriptions restent non explicites et centrées sur la sécurité et le consentement.</p>
+  <div class="grid">
+    <div class="card practice">
+      <h3>Bondage & cordes</h3>
+      <p class="small">Attaches esthétiques, shibari, et positionnements sécurisés.</p>
+    </div>
+    <div class="card practice">
+      <h3>Jeux d'impact</h3>
+      <p class="small">Fessées, paddles, martinet — intensité adaptée au niveau du soumis.</p>
+    </div>
+    <div class="card practice">
+      <h3>Jeux psychologiques</h3>
+      <p class="small">Rôle-play, scénarios et mise en scène pour une immersion mentale.</p>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <h2>Galerie</h2>
+  <p class="small">Images esthétiques et suggestives — non explicites. Cliquez pour agrandir.</p>
+  <div class="grid gallery">
+    <img src="/images/placeholder1.jpg" alt="Portrait stylisé de Maîtresse Katarina" />
+    <img src="/images/placeholder2.jpg" alt="Ambiance donjon, lumière tamisée" />
+    <img src="/images/placeholder3.jpg" alt="Accessoires et mobilier" />
+  </div>
+  <p class="small" style="margin-top:10px">Remarque : pour préserver l'intimité, certaines photos peuvent être protégées par mot de passe ou accessibles uniquement après prise de contact.</p>
+</section>
+
+<section id="temoignages">
+  <h2>Témoignages</h2>
+  <div class="grid">
+    <div class="card">
+      <p>« Une expérience raffinée, où la psychologie compte autant que les gestes. »</p>
+      <p class="small">— A.M.</p>
+    </div>
+    <div class="card">
+      <p>« Maîtresse Katarina m'a guidé avec fermeté et bienveillance. »</p>
+      <p class="small">— L.</p>
+    </div>
+    <div class="card">
+      <p>« Professionnalisme, discrétion et esthétique au rendez-vous. »</p>
+      <p class="small">— T.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact & prise de rendez‑vous</h2>
+  <div style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+    <div class="card">
+      <form id="contactForm">
+        <label class="small">Votre nom (ou pseudo)</label><br>
+        <input type="text" name="name" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+
+        <label class="small">Email</label><br>
+        <input type="email" name="email" required style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"><br>
+
+        <label class="small">Message — précisez niveau, attentes et éventuelles contraintes</label><br>
+        <textarea name="message" rows="6" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--muted)"></textarea>
+
+        <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+          <input type="checkbox" id="consent" required>
+          <label for="consent" class="small">Je confirme avoir plus de 18 ans et accepte que mes données soient utilisées pour la prise de rendez-vous.</label>
+        </div>
+
+        <div style="margin-top:12px">
+          <button type="submit" style="background:var(--accent);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer">Envoyer</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="card">
+      <h3>Infos pratiques</h3>
+      <p class="small">SMS uniquement — 07 00 00 00 00</p>
+      <p class="small">Lieu : Paris (détails fournis après confirmation)</p>
+      <p class="small">Respect et langage soigné requis.</p>
+    </aside>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="small">© <span id="year"></span> Maîtresse Katarina — Tous droits réservés</div>
+    <div class="small"><a href="#">Politique de confidentialité</a> · <a href="#">Mentions légales</a></div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Age gate
+    document.getElementById('yes').addEventListener('click', ()=>{document.getElementById('agegate').style.display='none';});
+    document.getElementById('no').addEventListener('click', ()=>{window.location.href='about:blank';});
+
+    // Simple contact handler (placeholder) — replace with server-side or form service
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Merci — votre demande a été reçue. Je vous répondrai par email.');
+      this.reset();
+    });
+  </script></body>
+</html>
